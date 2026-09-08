@@ -30,6 +30,14 @@ nav {
     background-color: #50ff96;
 }
 
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
@@ -49,7 +57,7 @@ div {
     font-family: 'Poppins', sans-serif;
 }
 
-b {
+h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     color: #000000;
