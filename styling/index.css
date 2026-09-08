@@ -56,3 +56,10 @@ b {
     margin: 10px;
     padding: 10px;
 }
+
+flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: horizontal;
+    margin-top: 20px;
+}

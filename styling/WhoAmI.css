@@ -1,0 +1,58 @@
+html {
+    background-image: url('../Frontend/assets/mohamed_hassan-windmill-10392174_1920.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    min-height: 400px;
+} 
+
+head {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    margin-top: 20px;
+}
+
+nav {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 0 2rem;
+    Padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #50ff96;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #000000;
+    margin: 40px auto;
+    border: 3px solid #000000;
+    background-color: #ffffff;
+    width: 80%;
+}
+
+div {
+    width: auto;
+    height: 100%;
+    margin: 10px;
+    padding: 25px;
+    border: 3px solid #000000;
+    font-family: 'Poppins', sans-serif;
+}
+
+b {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #000000;
+    margin: 10px;
+    padding: 10px;
+}
