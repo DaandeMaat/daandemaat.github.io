@@ -1,0 +1,14 @@
+const projectenLijst = [
+    {
+        "titel": "Royal Flora Holland",
+        "beschrijving": "Als deel van studie heb ik een webapplicatie ontwikkeld voor Royal Flora Holland. Deze webapplicatiie had als doel om Royal Flora Holland de mogelijkheid te geven om online veilingen te hosten. Dit was mijn eerste echte ervaring met web development en ik heb deze opdracht met vier groepsgenoten uitgevoerd. De opdracht was taai helemaal aangezien ik in deze opdracht voor het eerst met dingen zoals HTML, CSS en JavaScript werkte. Echter heeft deze opdracht wel mijn intresse in Software engineering evenals web development gestimuleerd hier ga ik in mijn tweede projecten beschrijving verder op in.",
+        "link": "https://github.com/DaandeMaat/WebProject_klas3_groep4.git",
+        "datum": "2020-01-01"
+    },
+    {
+        "titel": "Hulstman en de Maat",
+        "beschrijving": "Mijn stiefvader wil samen met een vriend van hem een consultasieproject starten. Zij willen namelijk hun eigen bedrijf starten. Voor dit bedrijf wilde zij graag een informatievewebsite hebben en ik heb met enthousiasme aangegeven dat ik die website maar al te graag wilde maken. Sindsdien werk ik samen met mijn moeder die het logo van de website en de kleuren van de website bepaald om tot een mooi eind product uit te komen.",
+        "link": "https://github.com/DaandeMaat/Hulstman-de_Maat.git",
+        "datum": "2021-01-01"
+    }
+]
