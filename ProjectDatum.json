@@ -1,8 +1,7 @@
-const projectenLijst = [
+[
     {
         "titel": "Royal Flora Holland",
-        "beschrijving": "Als deel van studie heb ik een webapplicatie ontwikkeld voor Royal Flora Holland. Deze webapplicatie had als doel om Royal Flora Holland de mogelijkheid te geven om online veilingen te hosten. 
-        Dit was mijn eerste echte ervaring met web development en ik heb deze opdracht met vier groepsgenoten uitgevoerd. De opdracht was taai helemaal aangezien ik in deze opdracht voor het eerst met dingen zoals HTML, CSS en JavaScript werkte. Echter heeft deze opdracht wel mijn intresse in Software engineering evenals web development gestimuleerd hier ga ik in mijn tweede projecten beschrijving verder op in.",
+        "beschrijving": "Als deel van studie heb ik een webapplicatie ontwikkeld voor Royal Flora Holland. Deze webapplicatie had als doel om Royal Flora Holland de mogelijkheid te geven om online veilingen te hosten. Dit was mijn eerste echte ervaring met web development en ik heb deze opdracht met vier groepsgenoten uitgevoerd. De opdracht was taai helemaal aangezien ik in deze opdracht voor het eerst met dingen zoals HTML, CSS en JavaScript werkte. Echter heeft deze opdracht wel mijn intresse in Software engineering evenals web development gestimuleerd hier ga ik in mijn tweede projecten beschrijving verder op in.",
         "link": "https://github.com/DaandeMaat/WebProject_klas3_groep4.git",
         "datum": "01-10-2025"
     },
@@ -11,5 +10,17 @@ const projectenLijst = [
         "beschrijving": "Mijn stiefvader wil samen met een vriend van hem een consultasieproject starten. Zij willen namelijk hun eigen bedrijf starten. Voor dit bedrijf wilde zij graag een informatievewebsite hebben en ik heb met enthousiasme aangegeven dat ik die website maar al te graag wilde maken. Sindsdien werk ik samen met mijn moeder die het logo van de website en de kleuren van de website bepaald om tot een mooi eind product uit te komen.",
         "link": "https://github.com/DaandeMaat/Hulstman-de_Maat.git",
         "datum": "26-07-2026"
+    },
+    {
+        "titel": "Portfolio website",
+        "beschrijving": "Voor mijn portfolio website heb ik gebruik gemaakt van HTML, CSS en JavaScript. Het doel is om een plek te hebben waar ik mijn CV kan laten zien en waar mensen contact met mij kunnen opnemen.",
+        "link": "https://github.com/DaandeMaat/daandemaat.github.io",
+        "datum": "03-09-2026"
+    },
+    {
+        "titel": "Avond4daagse",
+        "beschrijving": "Net zoals Royal Flora Holland was dit een van de projecten die ik uitgevoerd heb voor mijn studie. Echter was dit project een stuk makkelijker dan het project voor Royal Flora Holland. Dit kwam omdat ik al wat ervaring had opgedaan met HTML, CSS en JavaScript. Daarnaast had ik ook al wat ervaring opgedaan met het werken in een team. Het doel van dit project was om een website te maken voor de Avond4daagse. Deze website moest informatie geven over de Avond4daagse en mensen de mogelijkheid geven om zich in te schrijven voor de Avond4daagse. We hebben ook dashboards gemaakt voor de verschillende rollen die er zijn bij de Avond4daagse. Zo hebben we een dashboard gemaakt voor de deelnemers, de organisatie en de vrijwilligers.",
+        "link": "https://github.com/dajouaou/Avondvierdaage1",
+        "datum": "02-09-2026"
     }
 ]
