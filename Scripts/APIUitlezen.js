@@ -1,4 +1,7 @@
 const lijst = document.getElementById("productenLijst");
+if (!lijst) {
+  throw new Error('Element #productenLijst niet gevonden: controleer het id in je HTML.');
+}
 
 async function toonProducten() {
   try {
@@ -12,17 +15,27 @@ async function toonProducten() {
       const titel = document.createElement("h3");
       titel.textContent = product.name;
 
+      const generatie = document.createElement("p")
+      generatie.textContent = product.data?.generation
+        ? `Generatie: ${product.data.generation}`
+        : "Generatie onbekend";
+
       const prijs = document.createElement("p");
       prijs.textContent = product.data?.price
         ? `Prijs: €${product.data.price}`
         : "Geen prijs bekend";
 
-      div.append(titel, prijs);
+      const capaciteit = document.createElement("p");
+      capaciteit.textContent = product.data?.capacity
+        ? `Capaciteit: ${product.data.capacity}`
+        : "Capaciteit onbekend";
+
+      div.append(titel, generatie, prijs, capaciteit);
       lijst.appendChild(div);
     });
   } catch (error) {
-    lijst.textContent = "Kon de producten niet laden. Probeer het later opnieuw.";
     console.error(error);
+    lijst.textContent = "Kon de producten niet laden. Probeer het later opnieuw.";
   }
 }
 
