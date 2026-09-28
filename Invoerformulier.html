@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styling/Algemeen.css" />
+    <link rel="stylesheet" href="./styling/Navbar.css" />
+  </head>
+  <body>
+    <h1 id="navbar"></h1>
+    <script src="./Scripts/LoadNavbar.js"></script>
+    <script src="./Scripts/Invoerformulier.js"></script>
+    <h1>Invoerformulier</h1>
+    <form id="invoerForm">
+      <label for="name">Naam:</label>
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="message">Bericht:</label>
+      <textarea id="message" name="message" required></textarea><br /><br />
+
+      <input type="submit" value="Verzenden" />
+    </form>
+  </body>
+</html>
