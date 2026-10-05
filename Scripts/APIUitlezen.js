@@ -18,7 +18,8 @@ async function toonPokemons() {
       const afbeelding = document.createElement("img");
       afbeelding.src = pokemon.sprites?.front_default ?? "";
       afbeelding.alt = pokemon.name;
-      afbeelding.width = 96;
+      afbeelding.width = 98;
+      afbeelding.height = 98;
 
       const types = document.createElement("p");
       types.textContent = `Types: ${pokemon.types.map((t) => t.type.name).join(", ")}`;

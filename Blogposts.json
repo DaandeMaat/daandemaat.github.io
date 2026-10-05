@@ -1,0 +1,12 @@
+[
+  {
+    "titel": "Blog Post 1: Welkom bij mijn allereerste blogpost!",
+    "inhoud": "Ik heb nog nooit eerder een blogpost geschreven dus bij voorbaad excuus dat uw oogbalen dit moeten meemaken. Voor nu zullen er alleen (semi) intressante verhalen komen te staan over mijn voortgang tijdens het programmeren van deze website en misschien een andere projecten waar ik aan werk.",
+    "datum": "08-09-2026"
+  },
+  {
+    "titel": "Blog Post 2: nieuwe blogpost",
+    "inhoud": "Hallo weer, om de voortgang in mijn portfoliosite te vieren maak ik weer een nieuwe blogpost. De volgende stap in het maken van de webaite was het dynamisch maken van mijn website met behulp van JavaScript. Dit heb ik gedaan door een JSON bestand te maken met daarin de data van mijn projecten en blogposts. Vervolgens heb ik een script geschreven dat deze data ophaalt en weergeeft op de website. Dit was een leuke uitdaging en ik heb er veel van geleerd.",
+    "datum": "04-10-2026"
+  }
+]
