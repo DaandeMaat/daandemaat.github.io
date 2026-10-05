@@ -1,24 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./styling/Navbar.css">
-    <link rel="stylesheet" href="./styling/Algemeen.css">
-    <link rel="stylesheet" href="./styling/Projecten.css">
-</head>
-<body>
-    <h1 id="navbar"></h1>
+    <link rel="stylesheet" href="./styling/Navbar.css" />
+    <link rel="stylesheet" href="./styling/Algemeen.css" />
+    <link rel="stylesheet" href="./styling/Projecten.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
 
     <h1>Projecten</h1>
 
     <div id="projectenLijst"></div>
 
-        <button id="changeContentButton">Sorteren op relevantie</button>
-
+    <button id="changeContentButton">Sorteren op datum</button>
+    <p id="sortStatus" role="status" class="sr-only"></p>
 
     <script src="./Scripts/LoadNavbar.js"></script>
     <script src="./Scripts/ProjectenSort.js"></script>
-</body>
+  </body>
 </html>

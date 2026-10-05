@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
       link.href = project.link;
       link.textContent = "Bekijk op GitHub";
       link.target = "_blank";
+      link.setAttribute('aria-label', `Bekijk ${project.titel} op GitHub`);
 
       projectDiv.appendChild(titel);
       projectDiv.appendChild(beschrijving);
@@ -51,8 +52,10 @@ document.addEventListener("DOMContentLoaded", () => {
   sortButton.addEventListener("click", () => {
     if (sorteerOplopend) {
       sortProjectenByDatumOudNaarNieuw(projecten);
+      sorteerStatus.textContent = "Projecten gesoorteerd van oud naar Nieuw";
     } else {
       sortProjectenByDatumNieuwNaarOud(projecten);
+      sorteerStatus.textContent = "Projecten gesoorteerd van nieuw naar Oud";
     }
     sorteerOplopend = !sorteerOplopend;
     toonProjecten(projecten);
