@@ -3,39 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pokémon beheren</title>
     <link rel="stylesheet" href="./styling/Algemeen.css">
     <link rel="stylesheet" href="./styling/Navbar.css">
 </head>
 <body>
 <h1 id="navbar"></h1>
-<script src="./Scripts/LoadNavbar.js"></script>
-<script src="./Scripts/RestfullAPI.js"></script>
-<h1>Producten beheren</h1>
+
+<h1>Alle Pokémon</h1>
+<div id="pokemonLijst"></div>
+
+<h1>Mijn team</h1>
 
 <form id="productForm">
-    <h1 id="formTitel">Nieuw product</h1>
+    <h2 id="formTitel">Nieuwe pokemon</h2>
 
     <label for="naam">Naam</label>
-    <input type="text" id="naam" required minlength="2">
+    <input type="text" id="naam" required aria-describedby="naam-fout" aria-invalid="false">
+    <p id="naam-fout" class="fout" hidden></p>
 
-    <label for="generatie">Generatie</label>
-    <input type="text" id="generatie">
+    <label for="pokedex">Pokedex-nummer</label>
+    <input type="text" id="pokedex" required aria-describedby="pokedex-fout" aria-invalid="false">
+    <p id="pokedex-fout" class="fout" hidden></p>
 
-    <label for="prijs">Prijs in euro's</label>
-    <input type="number" id="prijs" min="0" step="0.01">
+    <label for="stats">Stats</label>
+    <input type="text" id="stats" required aria-describedby="stats-fout" aria-invalid="false">
+    <p id="stats-fout" class="fout" hidden></p>
 
-    <label for="capaciteit">Capaciteit</label>
-    <input type="text" id="capaciteit">
-
+    <label for="types">Type(s)</label>
+    <input type="text" id="types" required aria-describedby="types-fout" aria-invalid="false">
+    <p id="types-fout" class="fout" hidden></p>
+    
     <button type="submit" id="opslaanKnop">Toevoegen</button>
     <button type="button" id="annuleerKnop" hidden>Annuleren</button>
 </form>
 
 <p id="status" role="status"></p>
-<div id="productenLijst"></div>
+<div id="teamLijst"></div>
 
+<script src="./Scripts/LoadNavbar.js"></script>
+<script src="./Scripts/RestfullAPI.js"></script>
 <script src="./Scripts/APIUitlezen.js"></script>
+<script src="./Scripts/MijnTeam.js"></script>
 
 </body>
 </html>

@@ -1,26 +1,17 @@
-const BASE_URL = "https://api.restful-api.dev/objects";
+const LIST_URL = "https://pokeapi.co/api/v2/pokemon";
 
-async function apiRequest(url, options = {}) {
-  const response = await fetch(url, {
-    headers: { "Content-Type": "application/json" },
-    ...options,
-  });
-
+async function apiRequest(url) {
+  const response = await fetch(url);
   if (!response.ok) {
     throw new Error(`Request mislukt: ${response.status} ${response.statusText}`);
   }
-
   return response.json();
 }
 
-const haalAllesOp = () => apiRequest(BASE_URL);
+async function haalAllesOp() {
+  const lijstData = await apiRequest(LIST_URL);
+  return Promise.all(lijstData.results.map((p) => apiRequest(p.url)));
+}
 
-const haalEenOp = (id) => apiRequest(`${BASE_URL}/${id}`);
-
-const wijzig = (id, wijzigingen) =>
-  apiRequest(`${BASE_URL}/${id}`, { method: "PUT", body: JSON.stringify(wijzigingen) });
-
-const voegToe = (product) =>
-  apiRequest(BASE_URL, { method: "POST", body: JSON.stringify(product) });
-
-const verwijder = (id) => apiRequest(`${BASE_URL}/${id}`, { method: "DELETE" });
+const haalEenOp = (naamOfId) =>
+  apiRequest(`https://pokeapi.co/api/v2/pokemon/${naamOfId}`);

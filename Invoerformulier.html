@@ -9,20 +9,50 @@
   </head>
   <body>
     <h1 id="navbar"></h1>
-    <script src="./Scripts/LoadNavbar.js"></script>
-    <script src="./Scripts/Invoerformulier.ts"></script>
+
     <h1>Invoerformulier</h1>
-    <form id="invoerForm">
-      <label for="name">Naam:</label>
-      <input type="text" id="name" name="name" required /><br /><br />
+    <form id="contact-form" novalidate>
+      <label for="naam">Naam:</label>
+      <input
+        type="text"
+        id="naam"
+        name="naam"
+        required
+        aria-describedby="naam-fout"
+        aria-invalid="false"
+      /><br />
+      <p id="naam-fout" class="fout" hidden></p>
+      <br /><br />
 
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required /><br /><br />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        aria-describedby="email-fout"
+        aria-invalid="false"
+      /><br />
+      <p id="email-fout" class="fout" hidden></p>
+      <br /><br />
 
-      <label for="message">Bericht:</label>
-      <textarea id="message" name="message" required></textarea><br /><br />
+      <label for="bericht">Bericht:</label>
+      <textarea
+        id="bericht"
+        name="bericht"
+        required
+        aria-describedby="bericht-fout"
+        aria-invalid="false"
+      ></textarea
+      ><br />
+      <p id="bericht-fout" class="fout" hidden></p>
+      <br /><br />
 
-      <input type="submit" value="Verzenden" />
+      <button type="submit">Verzenden</button>
     </form>
+
+    <p id="form-status" role="status"></p>
+    <script src="./Scripts/LoadNavbar.js"></script>
+    <script src="./Scripts/Invoerformulier.js"></script>
   </body>
 </html>

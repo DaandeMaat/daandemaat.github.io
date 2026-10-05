@@ -1,54 +1,40 @@
-const lijst = document.getElementById("productenLijst");
+const lijst = document.getElementById("pokemonLijst");
 if (!lijst) {
-  throw new Error('Element #productenLijst niet gevonden: controleer het id in je HTML.');
+  throw new Error('Element #pokemonLijst niet gevonden: controleer het id in je HTML.');
 }
 
-async function toonProducten() {
+async function toonPokemons() {
   try {
-    const producten = await haalAllesOp();
+    const pokemons = await haalAllesOp();
     lijst.innerHTML = "";
 
-    producten.forEach((product) => {
+    pokemons.forEach((pokemon) => {
       const div = document.createElement("div");
-      div.className = "product";
+      div.className = "pokemon-item";
 
-      const titel = document.createElement("h3");
-      titel.textContent = product.name;
+      const naam = document.createElement("h3");
+      naam.textContent = `#${pokemon.id} ${pokemon.name}`;
 
-      const generatie = document.createElement("p")
-      generatie.textContent = product.data?.generation
-        ? `Generatie: ${product.data.generation}`
-        : "Generatie onbekend";
+      const afbeelding = document.createElement("img");
+      afbeelding.src = pokemon.sprites?.front_default ?? "";
+      afbeelding.alt = pokemon.name;
+      afbeelding.width = 96;
 
-      const prijs = document.createElement("p");
-      prijs.textContent = product.data?.price
-        ? `Prijs: €${product.data.price}`
-        : "Geen prijs bekend";
+      const types = document.createElement("p");
+      types.textContent = `Types: ${pokemon.types.map((t) => t.type.name).join(", ")}`;
 
-      const capaciteit = document.createElement("p");
-      capaciteit.textContent = product.data?.capacity
-        ? `Capaciteit: ${product.data.capacity}`
-        : "Capaciteit onbekend";
+      const stats = document.createElement("p");
+      stats.textContent = `Stats: ${pokemon.stats
+        .map((s) => `${s.stat.name} ${s.base_stat}`)
+        .join(", ")}`;
 
-      div.append(titel, generatie, prijs, capaciteit);
+      div.append(naam, afbeelding, types, stats);
       lijst.appendChild(div);
     });
   } catch (error) {
     console.error(error);
-    lijst.textContent = "Kon de producten niet laden. Probeer het later opnieuw.";
+    lijst.textContent = "Kon de Pokémon niet laden. Probeer het later opnieuw.";
   }
 }
 
-async function maakLaptopAan() {
-  try {
-    const nieuw = await voegToe({
-      name: "Laptop",
-      data: { price: 999, brand: "Example" },
-    });
-    console.log("Aangemaakt met id:", nieuw.id);
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-toonProducten();
+toonPokemons();
