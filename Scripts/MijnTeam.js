@@ -17,6 +17,15 @@ const opslaanKnop = $("opslaanKnop");
 const annuleerKnop = $("annuleerKnop");
 const statusEl = $("status");
 
+const VELD_LABELS = {
+  naam: "Naam",
+  pokedex: "Pokedex-nummer",
+  stats: "Stats",
+  types: "Type(s)",
+};
+
+const formVelden = [naamInput, pokedexInput, statsInput, typesInput];
+
 let team = JSON.parse(localStorage.getItem(STORAGE_KEY) ?? "[]");
 let bewerkId = null;
 
@@ -28,6 +37,42 @@ function toonStatus(tekst, isFout = false) {
   statusEl.textContent = tekst;
   statusEl.style.color = isFout ? "red" : "green";
 }
+
+function berekenPokemonFout(input) {
+  if (input.value.trim() !== "") {
+    return "";
+  }
+
+  switch (input.id) {
+    case "naam":
+      return `Vul een naam in voor ${VELD_LABELS[input.id]}.`;
+    case "pokedex":
+      return `Vul een pokedex nummer in voor ${VELD_LABELS[input.id]}.`;
+    case "stats":
+      return `Vul een stats waarde in voor ${VELD_LABELS[input.id]}.`;
+    case "types":
+      return `Geef je pokémon een of twee types voor ${VELD_LABELS[input.id]}.`;
+    default:
+      return `Het veld "${VELD_LABELS[input.id]}" is verplicht.`;
+  }
+}
+
+function toonPokemonFout(input, tekst) {
+  const foutEl = document.getElementById(`${input.id}-fout`);
+  input.setAttribute("aria-invalid", String(tekst !== ""));
+  if (foutEl) {
+    foutEl.textContent = tekst;
+    foutEl.hidden = tekst === "";
+  }
+}
+
+formVelden.forEach((input) => {
+  input.addEventListener("input", () => {
+    if (input.getAttribute("aria-invalid") === "true") {
+      toonPokemonFout(input, berekenPokemonFout(input));
+    }
+  });
+});
 
 function maakKaart(pokemon) {
   const div = document.createElement("div");
@@ -76,6 +121,7 @@ function resetFormulier() {
   formTitel.textContent = "Nieuwe pokemon";
   opslaanKnop.textContent = "Toevoegen";
   annuleerKnop.hidden = true;
+  formVelden.forEach((input) => toonPokemonFout(input, ""));
 }
 
 function startBewerken(pokemon) {
@@ -93,17 +139,27 @@ function startBewerken(pokemon) {
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
+  const ongeldig = formVelden.filter((input) => {
+    const tekst = berekenPokemonFout(input);
+    toonPokemonFout(input, tekst);
+    return tekst !== "";
+  });
+
+  if (ongeldig.length > 0) {
+    toonStatus(
+      `Er ${ongeldig.length === 1 ? "ontbreekt 1 veld" : `ontbreken ${ongeldig.length} velden`}.`,
+      true
+    );
+    ongeldig[0].focus();
+    return;
+  }
+
   const payload = {
     naam: naamInput.value.trim(),
     pokedex: pokedexInput.value.trim(),
     stats: statsInput.value.trim(),
     types: typesInput.value.trim(),
   };
-
-  if (!payload.naam) {
-    toonStatus("Vul minimaal een naam in.", true);
-    return;
-  }
 
   if (bewerkId) {
     team = team.map((p) => (p.id === bewerkId ? { ...payload, id: bewerkId } : p));

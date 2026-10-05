@@ -20,10 +20,10 @@ function berekenFout(veld) {
         return "Dit veld is verplicht.";
     }
     if (veld === naam && !NAAM_REGEX.test(waarde)) {
-        return "Naam mag geen cijfers bevatten.";
+        return "Naam mag geen cijfers bevatten. Je heet niet R2-D2, toch?";
     }
     if (veld === email && !EMAIL_REGEX.test(waarde)) {
-        return "Vul een geldig e-mailadres in met een @-teken, bijvoorbeeld naam@voorbeeld.nl.";
+        return "Vul een geldig e-mailadres in met een @-teken.";
     }
     return "";
 }
