@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const projectenLijst = document.getElementById("projectenLijst");
   const sortButton = document.getElementById("changeContentButton");
+  const sorteerStatus = document.getElementById("sorteerStatus");
 
   function parseDatum(datumStr) {
     const [dag, maand, jaar] = datumStr.split("-").map(Number);
@@ -52,10 +53,10 @@ document.addEventListener("DOMContentLoaded", () => {
   sortButton.addEventListener("click", () => {
     if (sorteerOplopend) {
       sortProjectenByDatumOudNaarNieuw(projecten);
-      sorteerStatus.textContent = "Projecten gesoorteerd van oud naar Nieuw";
+      sorteerStatus.textContent = "Projecten gesoorteerd van oud naar nieuw";
     } else {
       sortProjectenByDatumNieuwNaarOud(projecten);
-      sorteerStatus.textContent = "Projecten gesoorteerd van nieuw naar Oud";
+      sorteerStatus.textContent = "Projecten gesoorteerd van nieuw naar oud";
     }
     sorteerOplopend = !sorteerOplopend;
     toonProjecten(projecten);

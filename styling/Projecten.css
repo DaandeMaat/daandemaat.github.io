@@ -9,6 +9,16 @@ button {
     transition: background-color 0.3s ease;
     border-radius: 5px;
 }
+
 button:hover {
-            background-color: #9efeb3;
-        }
+     background-color: #9efeb3;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
