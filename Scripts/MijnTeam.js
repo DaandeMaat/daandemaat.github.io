@@ -7,7 +7,7 @@ const $ = (id) => {
 };
 
 const teamLijst = $("teamLijst");
-const form = $("productForm");
+const form = $("pokemonForm");
 const formTitel = $("formTitel");
 const naamInput = $("naam");
 const pokedexInput = $("pokedex");
@@ -35,7 +35,8 @@ function bewaar() {
 
 function toonStatus(tekst, isFout = false) {
   statusEl.textContent = tekst;
-  statusEl.style.color = isFout ? "red" : "green";
+  statusEl.classList.toggle("status-fout", isFout);
+  statusEl.classList.toggle("status-succes", !isFout);
 }
 
 function berekenPokemonFout(input) {
