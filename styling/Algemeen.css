@@ -59,6 +59,14 @@ h2 {
     border: 5px solid red; 
     }
 
+#status,
+#form-status,
+#sorteerStatus {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 0.75rem;
+}
+
 .status-fout {
   color: #c0392b;
 }
