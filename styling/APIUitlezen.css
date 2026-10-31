@@ -1,0 +1,19 @@
+#pokemonLijst,
+#teamLijst {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.pokemon-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+@media (max-width: 480px) {
+  #pokemonLijst,
+  #teamLijst {
+    grid-template-columns: 1fr;
+  }
+}

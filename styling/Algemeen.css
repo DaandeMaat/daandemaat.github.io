@@ -58,7 +58,7 @@ h2 {
     [aria-invalid="true"] { 
     border: 5px solid red; 
     }
-
+    
 #status,
 #form-status,
 #sorteerStatus {

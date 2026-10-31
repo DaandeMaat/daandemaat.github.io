@@ -2,7 +2,10 @@ const STORAGE_KEY = "mijn-team";
 
 const $ = (id) => {
   const el = document.getElementById(id);
-  if (!el) throw new Error(`Element #${id} niet gevonden: controleer het id in je HTML.`);
+  if (!el)
+    throw new Error(
+      `Element #${id} niet gevonden: controleer het id in je HTML.`,
+    );
   return el;
 };
 
@@ -25,6 +28,31 @@ const VELD_LABELS = {
 };
 
 const formVelden = [naamInput, pokedexInput, statsInput, typesInput];
+
+
+const NL_TYPE_VERTALING = {
+  normaal: "normal", vuur: "fire", water: "water", elektrisch: "electric",
+  gras: "grass", ijs: "ice", vechten: "fighting", gevecht: "fighting",
+  gif: "poison", grond: "ground", vliegend: "flying", psychisch: "psychic",
+  insect: "bug", steen: "rock", gesteente: "rock", geest: "ghost",
+  draak: "dragon", duister: "dark", staal: "steel", fee: "fairy",
+};
+
+function naarTypeKleur(naam) {
+  const schoon = naam.toLowerCase().trim();
+  const engelsNaam = TYPE_KLEUREN[schoon] ? schoon : NL_TYPE_VERTALING[schoon];
+  return engelsNaam ? TYPE_KLEUREN[engelsNaam] : null;
+}
+
+function zetAchtergrond(div, typeNamen) {
+  const kleuren = typeNamen.map(naarTypeKleur).filter(Boolean);
+
+  if (kleuren.length === 0) {
+    return;
+  }
+  div.style.background =
+    kleuren.length === 1 ? kleuren[0] : `linear-gradient(135deg, ${kleuren.join(", ")})`;
+}
 
 let team = JSON.parse(localStorage.getItem(STORAGE_KEY) ?? "[]");
 let bewerkId = null;
@@ -78,6 +106,11 @@ formVelden.forEach((input) => {
 function maakKaart(pokemon) {
   const div = document.createElement("div");
   div.className = "pokemon-item";
+
+  const typeNamen = pokemon.types
+    ? pokemon.types.split(",").map((t) => t.trim()).filter(Boolean)
+    : [];
+  zetAchtergrond(div, typeNamen);
 
   const naam = document.createElement("h3");
   naam.textContent = pokemon.naam;
@@ -147,9 +180,10 @@ form.addEventListener("submit", (event) => {
   });
 
   if (ongeldig.length > 0) {
+    const namen = ongeldig.map((input) => VELD_LABELS[input.id]).join(", ");
     toonStatus(
-      `Er ${ongeldig.length === 1 ? "ontbreekt 1 veld" : `ontbreken ${ongeldig.length} velden`}.`,
-      true
+      `Er ${ongeldig.length === 1 ? "ontbreekt 1 veld" : `ontbreken ${ongeldig.length} velden`}: ${namen}.`,
+      true,
     );
     ongeldig[0].focus();
     return;
@@ -163,7 +197,9 @@ form.addEventListener("submit", (event) => {
   };
 
   if (bewerkId) {
-    team = team.map((p) => (p.id === bewerkId ? { ...payload, id: bewerkId } : p));
+    team = team.map((p) =>
+      p.id === bewerkId ? { ...payload, id: bewerkId } : p,
+    );
     toonStatus("Pokémon gewijzigd.");
   } else {
     team.push({ ...payload, id: crypto.randomUUID() });

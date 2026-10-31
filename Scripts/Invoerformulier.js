@@ -10,6 +10,12 @@ if (!form || !statusEl || !naam || !email || !bericht) {
 
 const velden = [naam, email, bericht];
 
+const VELD_LABELS = {
+    naam: "Naam",
+    email: "Email",
+    bericht: "Bericht",
+};
+
 const NAAM_REGEX = /^[^\d]+$/;
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;  
 
@@ -55,11 +61,16 @@ form.addEventListener("submit", (event) => {
     });
 
     if (ongeldig.length > 0) {
-        statusEl.textContent = `Er ${ongeldig.length === 1 ? "is 1 veld" : `zijn ${ongeldig.length} velden`} niet correct ingevuld.`;
+        const namen = ongeldig.map((veld) => VELD_LABELS[veld.id] ?? veld.id).join(", ");
+        statusEl.textContent =  `Er ${ongeldig.length === 1 ? "ontbreekt 1 veld" : `ontbreken ${ongeldig.length} velden`}: ${namen}.`,
+        statusEl.classList.add("status-fout");
+        statusEl.classList.remove("status-succes");
         ongeldig[0].focus();
         return;
     }
 
     statusEl.textContent = "Formulier succesvol verzonden!";
+    statusEl.classList.add("status-succes");
+    statusEl.classList.remove("status-fout");
     form.reset();
 });
