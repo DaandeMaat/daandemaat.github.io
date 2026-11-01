@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("daandemaat.github.io")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d50ae74522d4032f6ae511295bbcdb33170dd4cb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0b3b00e1cb7cf0871297f485c5c30f696c81252a")]
 [assembly: System.Reflection.AssemblyProductAttribute("daandemaat.github.io")]
 [assembly: System.Reflection.AssemblyTitleAttribute("daandemaat.github.io")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

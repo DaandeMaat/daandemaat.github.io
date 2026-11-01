@@ -31,7 +31,7 @@ const toonBlogposts = (posts) => {
   });
 };
 
-fetch("./Blogposts.json")
+fetch("../Data/Seed/Blogposts.json")
   .then((response) => response.json())
   .then((data) => {
     const posts = [...data].sort((a, b) => parseDatum(b.datum) - parseDatum(a.datum));

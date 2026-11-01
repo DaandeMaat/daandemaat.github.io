@@ -9,10 +9,8 @@ C:\Users\daand\OneDrive\Documents\GitHub\daandemaat.github.io\obj\Debug\net10.0\
 C:\Users\daand\OneDrive\Documents\GitHub\daandemaat.github.io\obj\Debug\net10.0\daandemaat.github.io.sourcelink.json
 C:\Users\daand\OneDrive\Documents\GitHub\daandemaat.github.io\bin\Debug\net10.0\appsettings.Development.json
 C:\Users\daand\OneDrive\Documents\GitHub\daandemaat.github.io\bin\Debug\net10.0\appsettings.json
-C:\Users\daand\OneDrive\Documents\GitHub\daandemaat.github.io\bin\Debug\net10.0\Blogposts.json
 C:\Users\daand\OneDrive\Documents\GitHub\daandemaat.github.io\bin\Debug\net10.0\package-lock.json
 C:\Users\daand\OneDrive\Documents\GitHub\daandemaat.github.io\bin\Debug\net10.0\package.json
-C:\Users\daand\OneDrive\Documents\GitHub\daandemaat.github.io\bin\Debug\net10.0\ProjectDatum.json
 C:\Users\daand\OneDrive\Documents\GitHub\daandemaat.github.io\bin\Debug\net10.0\daandemaat.github.io.staticwebassets.endpoints.json
 C:\Users\daand\OneDrive\Documents\GitHub\daandemaat.github.io\bin\Debug\net10.0\daandemaat.github.io.exe
 C:\Users\daand\OneDrive\Documents\GitHub\daandemaat.github.io\bin\Debug\net10.0\daandemaat.github.io.deps.json
@@ -128,3 +126,5 @@ C:\Users\daand\OneDrive\Documents\GitHub\daandemaat.github.io\obj\Debug\net10.0\
 C:\Users\daand\OneDrive\Documents\GitHub\daandemaat.github.io\obj\Debug\net10.0\daandemaat.github.io.pdb
 C:\Users\daand\OneDrive\Documents\GitHub\daandemaat.github.io\obj\Debug\net10.0\daandemaat.github.io.genruntimeconfig.cache
 C:\Users\daand\OneDrive\Documents\GitHub\daandemaat.github.io\obj\Debug\net10.0\ref\daandemaat.github.io.dll
+C:\Users\daand\OneDrive\Documents\GitHub\daandemaat.github.io\bin\Debug\net10.0\Data\Seed\Blogposts.json
+C:\Users\daand\OneDrive\Documents\GitHub\daandemaat.github.io\bin\Debug\net10.0\Data\Seed\ProjectDatum.json

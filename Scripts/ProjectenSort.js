@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     toonProjecten(projecten);
   });
 
-  fetch("./ProjectDatum.json")
+  fetch("../Data/Seed/ProjectDatum.json")
     .then((response) => response.json())
     .then((data) => {
       projecten = data;
