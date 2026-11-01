@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("d6d9b7f2-bd85-4dd6-ba20-8b3ecaa5e4eb")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("daandemaat.github.io")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79d798da31aa142aa834cde3fe6dec042ec871bf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d50ae74522d4032f6ae511295bbcdb33170dd4cb")]
 [assembly: System.Reflection.AssemblyProductAttribute("daandemaat.github.io")]
 [assembly: System.Reflection.AssemblyTitleAttribute("daandemaat.github.io")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
