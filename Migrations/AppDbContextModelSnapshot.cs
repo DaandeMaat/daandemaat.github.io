@@ -58,6 +58,10 @@ namespace daandemaat.github.io.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("Categorie")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<DateOnly>("Datum")
                         .HasColumnType("date");
 

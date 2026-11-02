@@ -10,13 +10,13 @@ Open een terminal (menu **Terminal → New Terminal**). Typ het volgende command
 
    dotnet run
 
-Wacht tot je een regel ziet als `Now listening on: https://localhost:5409`. Het nummer achter `localhost:` kan bij jou anders zijn. Dat is normaal.
+Wacht tot je een regel ziet als `Now listening on: https://localhost:5049`. Het nummer achter `localhost:` kan bij jou anders zijn. Dat is normaal.
 
 ### 2. Swagger openen
 
 Open je browser en ga naar het adres uit de terminal, met `/swagger` erachter. Bijvoorbeeld:
 
-https://localhost:5409/swagger
+https://localhost:5049/swagger
 
 Je ziet nu een overzicht van alle beschikbare data, zoals **Blog** en **Projecten**.
 

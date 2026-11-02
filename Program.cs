@@ -1,5 +1,6 @@
 using daandemaat.github.io.Data;
 using Microsoft.EntityFrameworkCore;
+using daandemaat.github.io.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,9 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("Default")));
+    
+builder.Services.AddScoped<IProjectService, ProjectService>();
+builder.Services.AddScoped<IBlogService, BlogService>();
 
 var app = builder.Build();
 
