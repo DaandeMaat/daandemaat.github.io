@@ -6,20 +6,16 @@ namespace daandemaat.github.io.Controllers;
 
 [Route("api/project")]
 [ApiController]
-public class ProjectenController : ControllerBase
+public class ProjectenController(IProjectService service) : ControllerBase
 {
-    private readonly IProjectService _service;
-
-    public ProjectenController(IProjectService service) => _service = service;
-
     [HttpGet]
     public async Task<ActionResult<List<Project>>> GetProjecten() =>
-        await _service.GetAllAsync();
+        await service.GetAllAsync();
 
     [HttpGet("{id}")]
     public async Task<ActionResult<Project>> GetProjectById(int id)
     {
-        var project = await _service.GetByIdAsync(id);
+        var project = await service.GetByIdAsync(id);
         if (project is null) return NotFound();
         return project;
     }
@@ -29,7 +25,7 @@ public class ProjectenController : ControllerBase
     {
         try
         {
-            var project = await _service.CreateAsync(dto);
+            var project = await service.CreateAsync(dto);
             return CreatedAtAction(nameof(GetProjectById), new { id = project.Id }, project);
         }
         catch (ArgumentException ex)
@@ -43,7 +39,7 @@ public class ProjectenController : ControllerBase
     {
         try
         {
-            return await _service.UpdateAsync(id, dto) ? NoContent() : NotFound();
+            return await service.UpdateAsync(id, dto) ? NoContent() : NotFound();
         }
         catch (ArgumentException ex)
         {
@@ -53,5 +49,5 @@ public class ProjectenController : ControllerBase
 
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteProject(int id) =>
-        await _service.DeleteAsync(id) ? NoContent() : NotFound();
+        await service.DeleteAsync(id) ? NoContent() : NotFound();
 }

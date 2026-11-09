@@ -9,4 +9,5 @@ public class AppDbContext : DbContext
 
     public DbSet<Blog> Blogs => Set<Blog>();
     public DbSet<Project> Projecten => Set<Project>();
+    public DbSet<Test> Tests => Set<Test>();
 }

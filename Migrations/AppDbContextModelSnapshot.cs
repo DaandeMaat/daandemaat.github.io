@@ -77,6 +77,31 @@ namespace daandemaat.github.io.Migrations
 
                     b.ToTable("Projecten");
                 });
+
+            modelBuilder.Entity("daandemaat.github.io.Models.Test", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Beschrijving")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Ezelsbrug")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Onderdeel")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tests");
+                });
 #pragma warning restore 612, 618
         }
     }

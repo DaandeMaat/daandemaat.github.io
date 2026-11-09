@@ -13,6 +13,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     
 builder.Services.AddScoped<IProjectService, ProjectService>();
 builder.Services.AddScoped<IBlogService, BlogService>();
+builder.Services.AddScoped<ITestService, TestService>();
 
 var app = builder.Build();
 
