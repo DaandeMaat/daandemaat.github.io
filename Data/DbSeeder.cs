@@ -13,6 +13,7 @@ public static class DbSeeder
 
     private record BlogSeed(string Titel, string Inhoud, DateOnly Datum);
     private record ProjectSeed(string Titel, string Beschrijving, string Link, string Categorie, DateOnly Datum);
+    private record TestSeed(string Onderdeel, string Beschrijving, string Ezelsbrug);
 
     public static async Task SeedAsync(AppDbContext context, string contentRootPath)
     {
