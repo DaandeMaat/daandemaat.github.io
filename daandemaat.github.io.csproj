@@ -14,8 +14,17 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" Version="18.12.0" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="10.3.1" />
+    <Compile Remove="daandemaat.github.io.UnitTests\**" />
+    <Compile Remove="daandemaat.github.io.Tests\**" />
+    <Content Remove="daandemaat.github.io.UnitTests\**" />
+    <Content Remove="daandemaat.github.io.Tests\**" />
+    <EmbeddedResource Remove="daandemaat.github.io.UnitTests\**" />
+    <EmbeddedResource Remove="daandemaat.github.io.Tests\**" />
+    <None Remove="daandemaat.github.io.UnitTests\**" />
+    <None Remove="daandemaat.github.io.Tests\**" />
   </ItemGroup>
 
 </Project>

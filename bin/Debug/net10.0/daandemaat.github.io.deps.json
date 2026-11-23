@@ -11,6 +11,7 @@
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "10.0.14",
           "Microsoft.AspNetCore.OpenApi": "10.0.14",
           "Microsoft.EntityFrameworkCore.Design": "10.0.14",
+          "Microsoft.Testing.Extensions.CodeCoverage": "18.12.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "10.0.3",
           "Swashbuckle.AspNetCore": "10.3.1"
         },
@@ -328,6 +329,14 @@
           }
         }
       },
+      "Microsoft.DiaSymReader/2.2.10": {
+        "runtime": {
+          "lib/net10.0/Microsoft.DiaSymReader.dll": {
+            "assemblyVersion": "2.2.10.0",
+            "fileVersion": "2.200.1026.32716"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore/10.0.14": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Abstractions": "10.0.14"
@@ -393,11 +402,379 @@
           }
         }
       },
+      "Microsoft.Testing.Extensions.CodeCoverage/18.12.0": {
+        "dependencies": {
+          "Microsoft.DiaSymReader": "2.2.10",
+          "Microsoft.Extensions.DependencyModel": "10.0.14",
+          "Microsoft.Testing.Platform": "2.5.0",
+          "Mono.Cecil": "0.11.6"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.CodeCoverage.Core.dll": {
+            "assemblyVersion": "18.12.0.0",
+            "fileVersion": "18.1200.26.50607"
+          },
+          "lib/net8.0/Microsoft.CodeCoverage.Instrumentation.Core.dll": {
+            "assemblyVersion": "18.12.0.0",
+            "fileVersion": "18.1200.26.50607"
+          },
+          "lib/net8.0/Microsoft.CodeCoverage.Instrumentation.dll": {
+            "assemblyVersion": "18.12.0.0",
+            "fileVersion": "18.1200.26.50607"
+          },
+          "lib/net8.0/Microsoft.CodeCoverage.Interprocess.dll": {
+            "assemblyVersion": "18.12.0.0",
+            "fileVersion": "18.1200.26.50607"
+          },
+          "lib/net8.0/Microsoft.Testing.Extensions.CodeCoverage.dll": {
+            "assemblyVersion": "18.12.0.0",
+            "fileVersion": "18.1200.26.50607"
+          },
+          "lib/net8.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {
+            "assemblyVersion": "15.0.0.0",
+            "fileVersion": "18.1200.26.50607"
+          }
+        },
+        "resources": {
+          "lib/net8.0/cs/Microsoft.Testing.Extensions.CodeCoverage.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net8.0/de/Microsoft.Testing.Extensions.CodeCoverage.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net8.0/es/Microsoft.Testing.Extensions.CodeCoverage.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net8.0/fr/Microsoft.Testing.Extensions.CodeCoverage.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net8.0/hu/Microsoft.Testing.Extensions.CodeCoverage.resources.dll": {
+            "locale": "hu"
+          },
+          "lib/net8.0/it/Microsoft.Testing.Extensions.CodeCoverage.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net8.0/ja/Microsoft.Testing.Extensions.CodeCoverage.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net8.0/ko/Microsoft.Testing.Extensions.CodeCoverage.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net8.0/nl/Microsoft.Testing.Extensions.CodeCoverage.resources.dll": {
+            "locale": "nl"
+          },
+          "lib/net8.0/pl/Microsoft.Testing.Extensions.CodeCoverage.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net8.0/pt-BR/Microsoft.Testing.Extensions.CodeCoverage.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net8.0/pt-PT/Microsoft.Testing.Extensions.CodeCoverage.resources.dll": {
+            "locale": "pt-PT"
+          },
+          "lib/net8.0/ru/Microsoft.Testing.Extensions.CodeCoverage.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net8.0/sv/Microsoft.Testing.Extensions.CodeCoverage.resources.dll": {
+            "locale": "sv"
+          },
+          "lib/net8.0/tr/Microsoft.Testing.Extensions.CodeCoverage.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net8.0/zh-Hans/Microsoft.Testing.Extensions.CodeCoverage.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net8.0/zh-Hant/Microsoft.Testing.Extensions.CodeCoverage.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/linux-musl-x64/native/Cov_x64.config": {
+            "rid": "linux-musl-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-musl-x64/native/libCoverageInstrumentationMethod.so": {
+            "rid": "linux-musl-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-musl-x64/native/libInstrumentationEngine.so": {
+            "rid": "linux-musl-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/Cov_x64.config": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/libCoverageInstrumentationMethod.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/libInstrumentationEngine.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/Cov_x64.config": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/libCoverageInstrumentationMethod.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/libInstrumentationEngine.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-arm64/native/CodeCoverageMessages.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "18.0.26506.29711"
+          },
+          "runtimes/win-arm64/native/Cov_arm64.config": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-arm64/native/Cov_x64.config": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-arm64/native/Cov_x86.config": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-arm64/native/MicrosoftInstrumentationEngine_arm64.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "15.1.0.37263"
+          },
+          "runtimes/win-arm64/native/MicrosoftInstrumentationEngine_x64.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "15.1.0.37263"
+          },
+          "runtimes/win-arm64/native/MicrosoftInstrumentationEngine_x86.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "15.1.0.37263"
+          },
+          "runtimes/win-arm64/native/covrun32.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "18.0.26506.29711"
+          },
+          "runtimes/win-arm64/native/covrun64.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "18.0.26506.29711"
+          },
+          "runtimes/win-arm64/native/covrunarm64.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "18.0.26506.29711"
+          },
+          "runtimes/win-arm64/native/msdia140.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "14.52.37025.0"
+          },
+          "runtimes/win-x64/native/CodeCoverageMessages.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "18.0.26506.29711"
+          },
+          "runtimes/win-x64/native/Cov_arm64.config": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/Cov_x64.config": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/Cov_x86.config": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/MicrosoftInstrumentationEngine_arm64.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "15.1.0.37263"
+          },
+          "runtimes/win-x64/native/MicrosoftInstrumentationEngine_x64.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "15.1.0.37263"
+          },
+          "runtimes/win-x64/native/MicrosoftInstrumentationEngine_x86.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "15.1.0.37263"
+          },
+          "runtimes/win-x64/native/covrun32.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "18.0.26506.29711"
+          },
+          "runtimes/win-x64/native/covrun64.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "18.0.26506.29711"
+          },
+          "runtimes/win-x64/native/covrunarm64.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "18.0.26506.29711"
+          },
+          "runtimes/win-x64/native/msdia140.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "14.52.37025.0"
+          },
+          "runtimes/win-x86/native/CodeCoverageMessages.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "18.0.26506.29711"
+          },
+          "runtimes/win-x86/native/Cov_arm64.config": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/Cov_x64.config": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/Cov_x86.config": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/MicrosoftInstrumentationEngine_arm64.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "15.1.0.37263"
+          },
+          "runtimes/win-x86/native/MicrosoftInstrumentationEngine_x64.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "15.1.0.37263"
+          },
+          "runtimes/win-x86/native/MicrosoftInstrumentationEngine_x86.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "15.1.0.37263"
+          },
+          "runtimes/win-x86/native/covrun32.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "18.0.26506.29711"
+          },
+          "runtimes/win-x86/native/covrun64.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "18.0.26506.29711"
+          },
+          "runtimes/win-x86/native/covrunarm64.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "18.0.26506.29711"
+          },
+          "runtimes/win-x86/native/msdia140.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "14.52.37025.0"
+          }
+        }
+      },
+      "Microsoft.Testing.Platform/2.5.0": {
+        "runtime": {
+          "lib/net9.0/Microsoft.Testing.Platform.dll": {
+            "assemblyVersion": "2.5.0.0",
+            "fileVersion": "2.500.26.50601"
+          }
+        },
+        "resources": {
+          "lib/net9.0/cs/Microsoft.Testing.Platform.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net9.0/de/Microsoft.Testing.Platform.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net9.0/es/Microsoft.Testing.Platform.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net9.0/fr/Microsoft.Testing.Platform.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net9.0/it/Microsoft.Testing.Platform.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net9.0/ja/Microsoft.Testing.Platform.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net9.0/ko/Microsoft.Testing.Platform.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net9.0/pl/Microsoft.Testing.Platform.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net9.0/pt-BR/Microsoft.Testing.Platform.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net9.0/ru/Microsoft.Testing.Platform.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net9.0/tr/Microsoft.Testing.Platform.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net9.0/zh-Hans/Microsoft.Testing.Platform.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net9.0/zh-Hant/Microsoft.Testing.Platform.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
       "Microsoft.VisualStudio.SolutionPersistence/1.0.52": {
         "runtime": {
           "lib/net8.0/Microsoft.VisualStudio.SolutionPersistence.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.52.6595"
+          }
+        }
+      },
+      "Mono.Cecil/0.11.6": {
+        "runtime": {
+          "lib/netstandard2.0/Mono.Cecil.Mdb.dll": {
+            "assemblyVersion": "0.11.6.0",
+            "fileVersion": "0.11.6.0"
+          },
+          "lib/netstandard2.0/Mono.Cecil.Pdb.dll": {
+            "assemblyVersion": "0.11.6.0",
+            "fileVersion": "0.11.6.0"
+          },
+          "lib/netstandard2.0/Mono.Cecil.Rocks.dll": {
+            "assemblyVersion": "0.11.6.0",
+            "fileVersion": "0.11.6.0"
+          },
+          "lib/netstandard2.0/Mono.Cecil.dll": {
+            "assemblyVersion": "0.11.6.0",
+            "fileVersion": "0.11.6.0"
           }
         }
       },
@@ -617,6 +994,13 @@
       "path": "microsoft.codeanalysis.workspaces.msbuild/5.0.0",
       "hashPath": "microsoft.codeanalysis.workspaces.msbuild.5.0.0.nupkg.sha512"
     },
+    "Microsoft.DiaSymReader/2.2.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zmGsm6b2y3STDa/Of7rdkkfTDV8VuGB8aCqIkLoJIQh5tL78K3zJ8OUyFKnfsaORXmGr9iOKwDkZfUjeXi+CwA==",
+      "path": "microsoft.diasymreader/2.2.10",
+      "hashPath": "microsoft.diasymreader.2.2.10.nupkg.sha512"
+    },
     "Microsoft.EntityFrameworkCore/10.0.14": {
       "type": "package",
       "serviceable": true,
@@ -659,12 +1043,33 @@
       "path": "microsoft.openapi/2.12.2",
       "hashPath": "microsoft.openapi.2.12.2.nupkg.sha512"
     },
+    "Microsoft.Testing.Extensions.CodeCoverage/18.12.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BST/sWYpKk9OXO7Yxktcg6FWORRsHU0EdCbMwZ7d3OqJsMKlrNHIZ30g0Ib4k5T5acJYXRBmg9mNrTU/N6cy1g==",
+      "path": "microsoft.testing.extensions.codecoverage/18.12.0",
+      "hashPath": "microsoft.testing.extensions.codecoverage.18.12.0.nupkg.sha512"
+    },
+    "Microsoft.Testing.Platform/2.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SQ+jJgs4I+Bwd+ua+c++6X+hOMOCceSHZxQPZVtkKit+ENUdErIuGjZjXe9XVDeHixZc3KCgsjhf/bxS4Mb5yA==",
+      "path": "microsoft.testing.platform/2.5.0",
+      "hashPath": "microsoft.testing.platform.2.5.0.nupkg.sha512"
+    },
     "Microsoft.VisualStudio.SolutionPersistence/1.0.52": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-oNv2JtYXhpdJrX63nibx1JT3uCESOBQ1LAk7Dtz/sr0+laW0KRM6eKp4CZ3MHDR2siIkKsY8MmUkeP5DKkQQ5w==",
       "path": "microsoft.visualstudio.solutionpersistence/1.0.52",
       "hashPath": "microsoft.visualstudio.solutionpersistence.1.0.52.nupkg.sha512"
+    },
+    "Mono.Cecil/0.11.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-f33RkDtZO8VlGXCtmQIviOtxgnUdym9xx/b1p9h91CRGOsJFxCFOFK1FDbVt1OCf1aWwYejUFa2MOQyFWTFjbA==",
+      "path": "mono.cecil/0.11.6",
+      "hashPath": "mono.cecil.0.11.6.nupkg.sha512"
     },
     "Mono.TextTemplating/3.0.0": {
       "type": "package",

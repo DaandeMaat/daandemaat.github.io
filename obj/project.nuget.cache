@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pjHqcyl2jPU=",
+  "dgSpecHash": "eN6/QDjCevc=",
   "success": true,
   "projectFilePath": "C:\\Users\\daand\\OneDrive\\Documents\\GitHub\\daandemaat.github.io\\daandemaat.github.io.csproj",
   "expectedPackageFiles": [
@@ -14,6 +14,7 @@
     "C:\\Users\\daand\\.nuget\\packages\\microsoft.codeanalysis.csharp.workspaces\\5.0.0\\microsoft.codeanalysis.csharp.workspaces.5.0.0.nupkg.sha512",
     "C:\\Users\\daand\\.nuget\\packages\\microsoft.codeanalysis.workspaces.common\\5.0.0\\microsoft.codeanalysis.workspaces.common.5.0.0.nupkg.sha512",
     "C:\\Users\\daand\\.nuget\\packages\\microsoft.codeanalysis.workspaces.msbuild\\5.0.0\\microsoft.codeanalysis.workspaces.msbuild.5.0.0.nupkg.sha512",
+    "C:\\Users\\daand\\.nuget\\packages\\microsoft.diasymreader\\2.2.10\\microsoft.diasymreader.2.2.10.nupkg.sha512",
     "C:\\Users\\daand\\.nuget\\packages\\microsoft.entityframeworkcore\\10.0.14\\microsoft.entityframeworkcore.10.0.14.nupkg.sha512",
     "C:\\Users\\daand\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\10.0.14\\microsoft.entityframeworkcore.abstractions.10.0.14.nupkg.sha512",
     "C:\\Users\\daand\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\10.0.14\\microsoft.entityframeworkcore.analyzers.10.0.14.nupkg.sha512",
@@ -22,7 +23,10 @@
     "C:\\Users\\daand\\.nuget\\packages\\microsoft.extensions.apidescription.server\\10.0.0\\microsoft.extensions.apidescription.server.10.0.0.nupkg.sha512",
     "C:\\Users\\daand\\.nuget\\packages\\microsoft.extensions.dependencymodel\\10.0.14\\microsoft.extensions.dependencymodel.10.0.14.nupkg.sha512",
     "C:\\Users\\daand\\.nuget\\packages\\microsoft.openapi\\2.12.2\\microsoft.openapi.2.12.2.nupkg.sha512",
+    "C:\\Users\\daand\\.nuget\\packages\\microsoft.testing.extensions.codecoverage\\18.12.0\\microsoft.testing.extensions.codecoverage.18.12.0.nupkg.sha512",
+    "C:\\Users\\daand\\.nuget\\packages\\microsoft.testing.platform\\2.5.0\\microsoft.testing.platform.2.5.0.nupkg.sha512",
     "C:\\Users\\daand\\.nuget\\packages\\microsoft.visualstudio.solutionpersistence\\1.0.52\\microsoft.visualstudio.solutionpersistence.1.0.52.nupkg.sha512",
+    "C:\\Users\\daand\\.nuget\\packages\\mono.cecil\\0.11.6\\mono.cecil.0.11.6.nupkg.sha512",
     "C:\\Users\\daand\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
     "C:\\Users\\daand\\.nuget\\packages\\newtonsoft.json\\13.0.4\\newtonsoft.json.13.0.4.nupkg.sha512",
     "C:\\Users\\daand\\.nuget\\packages\\npgsql\\10.0.3\\npgsql.10.0.3.nupkg.sha512",
