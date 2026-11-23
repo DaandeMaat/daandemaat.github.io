@@ -1,6 +1,7 @@
 using System.Text.Json;
 using daandemaat.github.io.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace daandemaat.github.io.Data;
 
@@ -13,14 +14,12 @@ public static class DbSeeder
 
     private record BlogSeed(string Titel, string Inhoud, DateOnly Datum);
     private record ProjectSeed(string Titel, string Beschrijving, string Link, string Categorie, DateOnly Datum);
-    private record TestSeed(string Onderdeel, string Beschrijving, string Ezelsbrug);
 
     public static async Task SeedAsync(AppDbContext context, string contentRootPath)
     {
         var seedPath = Path.Combine(contentRootPath, "Data", "Seed");
-        // Plakt het pad aan elkaar: <projectmap>\Data\Seed
 
-        if (!await context.Blogs.AnyAsync())  // Alleen doorgaan als de tabel leeg is (AnyAsync = "staat er minstens één rij in?").
+        if (!await context.Blogs.AnyAsync())
         {
             var blogs = await LoadAsync<BlogSeed>(Path.Combine(seedPath, "blogs.json"));
             context.Blogs.AddRange(blogs.Select(b => new Blog
@@ -29,7 +28,6 @@ public static class DbSeeder
                 Inhoud = b.Inhoud,
                 Datum = b.Datum
             }));
-            // Select maakt van elk BlogSeed een echt Blog-model. AddRange zet ze allemaal klaar om op te slaan.
         }
 
         if (!await context.Projecten.AnyAsync())
@@ -45,7 +43,7 @@ public static class DbSeeder
             }));
         }
 
-        await context.SaveChangesAsync();     // Pas nu gaan alle toegevoegde rijen echt naar PostgreSQL.
+        await context.SaveChangesAsync();
     }
 
     private static async Task<List<T>> LoadAsync<T>(string path)
@@ -54,5 +52,37 @@ public static class DbSeeder
 
         var json = await File.ReadAllTextAsync(path);
         return JsonSerializer.Deserialize<List<T>>(json, Options) ?? new List<T>();
+    }
+    public static async Task SeedUsersAsync(
+        UserManager<User> userManager,
+        RoleManager<IdentityRole> roleManager)
+    {
+        string[] roles = { "Gebruiker", "Editor", "Admin" };
+        foreach (var role in roles)
+        {
+            if (!await roleManager.RoleExistsAsync(role))
+                await roleManager.CreateAsync(new IdentityRole(role));
+        }
+
+        var testUsers = new[]
+        {
+            (Email: "admin@voorbeeld.com",     Role: "Admin"),
+            (Email: "editor@voorbeeld.com",    Role: "Editor"),
+            (Email: "gebruiker@voorbeeld.com", Role: "Gebruiker"),
+        };
+
+        foreach (var (email, role) in testUsers)
+        {
+            if (await userManager.FindByNameAsync(email) is not null) continue;
+
+            var user = new User { UserName = email, Email = email };
+            var result = await userManager.CreateAsync(user, "Testwachtwoord123!");
+
+            if (result.Succeeded)
+                await userManager.AddToRoleAsync(user, role);
+            else
+                foreach (var error in result.Errors)
+                    Console.WriteLine($"[SEED ERROR] {email}: {error.Description}");
+        }
     }
 }

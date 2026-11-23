@@ -128,3 +128,4 @@ C:\Users\daand\OneDrive\Documents\GitHub\daandemaat.github.io\obj\Debug\net10.0\
 C:\Users\daand\OneDrive\Documents\GitHub\daandemaat.github.io\obj\Debug\net10.0\ref\daandemaat.github.io.dll
 C:\Users\daand\OneDrive\Documents\GitHub\daandemaat.github.io\bin\Debug\net10.0\Data\Seed\Blogposts.json
 C:\Users\daand\OneDrive\Documents\GitHub\daandemaat.github.io\bin\Debug\net10.0\Data\Seed\ProjectDatum.json
+C:\Users\daand\OneDrive\Documents\GitHub\daandemaat.github.io\bin\Debug\net10.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

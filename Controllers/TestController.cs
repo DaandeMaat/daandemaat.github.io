@@ -1,11 +1,13 @@
 using daandemaat.github.io.Models;
 using daandemaat.github.io.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace daandemaat.github.io.Controllers;
 
 [Route("api/test")]
 [ApiController]
+[Authorize(Roles = "Gebruiker, Admin, Editor")]
 
 public class TestController : ControllerBase
 {

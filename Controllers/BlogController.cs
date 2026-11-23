@@ -1,6 +1,7 @@
 using daandemaat.github.io.Models;
 using daandemaat.github.io.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace daandemaat.github.io.Controllers;
 
@@ -21,9 +22,10 @@ public class BlogController : ControllerBase
     {
         var blog = await _service.GetByIdAsync(id);
         if (blog is null) return NotFound();
-        return blog;
+        return Ok(blog);
     }
 
+    [Authorize(Policy = "CanEditBlogs")]
     [HttpPost]
     public async Task<ActionResult<Blog>> PostBlog(Blog dto)
     {
@@ -38,6 +40,7 @@ public class BlogController : ControllerBase
         }
     }
 
+    [Authorize(Policy = "CanEditBlogs")]
     [HttpPut("{id}")]
     public async Task<IActionResult> PutBlog(int id, Blog dto)
     {
@@ -51,6 +54,7 @@ public class BlogController : ControllerBase
         }
     }
 
+    [Authorize(Policy = "CanEditBlogs")]
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteBlog(int id) =>
         await _service.DeleteAsync(id) ? NoContent() : NotFound();

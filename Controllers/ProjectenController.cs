@@ -1,6 +1,7 @@
 using daandemaat.github.io.Models;
 using daandemaat.github.io.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace daandemaat.github.io.Controllers;
 
@@ -20,6 +21,7 @@ public class ProjectenController(IProjectService service) : ControllerBase
         return project;
     }
 
+    [Authorize(Policy = "CanEditProjects")]
     [HttpPost]
     public async Task<ActionResult<Project>> PostProject(Project dto)
     {
@@ -34,6 +36,7 @@ public class ProjectenController(IProjectService service) : ControllerBase
         }
     }
 
+    [Authorize(Policy = "CanEditProjects")]
     [HttpPut("{id}")]
     public async Task<IActionResult> PutProject(int id, Project dto)
     {
@@ -47,6 +50,7 @@ public class ProjectenController(IProjectService service) : ControllerBase
         }
     }
 
+    [Authorize(Policy = "CanEditProjects")]
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteProject(int id) =>
         await service.DeleteAsync(id) ? NoContent() : NotFound();
